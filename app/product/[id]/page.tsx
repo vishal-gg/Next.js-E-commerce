@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import AnimateComp from "@/app/AnimateComp";
 import { useAppSelector, useAppDispatch } from "@/app/redux/hooks";
-import {addToCart, decrementQuantity, incrementQuantity, removeFromCart} from '@/app/redux/features/cartSlice'
+import {addToCart, decrementQuantity, incrementQuantity} from '@/app/redux/features/cartSlice'
 import { ProductType } from "@/interfaces/types";
 import {useState, useEffect} from 'react';
 import { AnimatePresence } from "framer-motion";
@@ -100,7 +100,7 @@ const Page = ({ params }: { params: { id: string } }) => {
     const ifExits = cart.some(item => item.product.id === Number(params.id))
     if(ifExits) setAlreadyOnCart(true)
     else setAlreadyOnCart(false)
-  }, [cart])
+  }, [cart, params.id])
 
 
   return (

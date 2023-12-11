@@ -5,9 +5,13 @@ import { MotionSpan } from "../MotionElement";
 import Link from "next/link";
 import logo from "@/public/logo.svg";
 import Image from "next/image";
+import {useState, useEffect} from 'react'
 
 const Navbar = () => {
+  const [isClient, setIsClient] = useState(false)
   const productCount = useAppSelector((store) => store.cartReducer.cart.length);
+
+  useEffect(() => setIsClient(true), [])
 
   return (
     <div>
@@ -22,7 +26,7 @@ const Navbar = () => {
           <button className="relative">
             <Link href="/cart">
               <PiShoppingCartSimple className="text-3xl" />
-              {productCount > 0 && (
+              {isClient && productCount > 0 && (
                 <div className="absolute -top-1 -right-1 w-5 aspect-square rounded-full bg-red-500 text-white font-medium grid place-content-center text-sm">
                   <MotionSpan
                     key={productCount}

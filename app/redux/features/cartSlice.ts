@@ -1,7 +1,7 @@
 import { ProductType } from "@/interfaces/types";
 import { createSlice } from "@reduxjs/toolkit/react";
 
-const ifCartExists = typeof window !== 'undefined' ? localStorage.getItem("cart") : 'undefined';
+const ifCartExists = typeof window !== 'undefined' ? localStorage.getItem("cart") : undefined;
 const cartFromLocalStorage = ifCartExists ? JSON.parse(ifCartExists) : null;
 
 
