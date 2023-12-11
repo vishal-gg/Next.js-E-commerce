@@ -19,7 +19,7 @@ const Products = () => {
 
   return (
     <AnimateComp>
-      <div className="flex gap-10 justify-center flex-wrap w-[min(1300px,100%-2rem)] mx-auto mt-10">
+      <div className="flex gap-10 justify-center flex-wrap w-[min(1300px,100%-2rem)] mx-auto my-10">
         {data &&
           data.map((product: ProductType, index: number) => (
             <ProductCard key={index} id={product.id} product={product} />

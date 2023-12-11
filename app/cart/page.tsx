@@ -12,6 +12,7 @@ import { LuMoveLeft } from "react-icons/lu";
 import { FaStar } from "react-icons/fa";
 import AnimateComp from "../AnimateComp";
 import { MotionDiv } from "../MotionElement";
+import emptyCartLogo from '@/public/cart.svg'
 
 const CartPage = () => {
 
@@ -70,7 +71,7 @@ const CartPage = () => {
 
   return (
     <AnimateComp>
-      <div className="min-h-[500px] flex flex-col w-[min(1300px,100%-2rem)] mx-auto rounded-3xl lg:p-8 p-4 bg-zinc-200">
+      <div className="min-h-[500px] flex flex-col w-[min(1300px,100%-2rem)] mx-auto rounded-3xl lg:p-8 p-4 bg-zinc-200 my-10">
         <div className="flex justify-between items-center mb-8">
           <div className="flex gap-2 items-center">
             <h2 className="text-3xl font-semibold">Cart</h2>
@@ -185,7 +186,13 @@ const CartPage = () => {
               </div>
             </MotionDiv>
           ) : (
-            <div className="text-center">cart is empty</div>
+            <div className="text-center">
+              <div className="w-56 h-56 relative mx-auto">
+                <Image src={emptyCartLogo} fill alt="empty-cart" className="object-cover" />
+              </div>
+              <p className="font-semibold text-3xl">your cart is empty</p>
+              <Link className="inline-block mt-8 py-3 px-6 rounded-md bg-blue-500 hover:bg-blue-600 transition-colors text-white font-medium" href="/">Continue Shopping</Link>
+            </div>
           )}
         </div>
       </div>
