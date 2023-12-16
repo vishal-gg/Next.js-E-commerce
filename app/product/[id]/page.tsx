@@ -125,9 +125,9 @@ const Page = ({ params }: { params: { id: string } }) => {
             variants={animationVariants}
             initial="hidden"
             animate="show"
-            className="flex-1 grid place-content-center bg-zinc-200 p-5"
+            className="flex-1 grid place-content-center bg-zinc-200 p-5 px-8"
           >
-            <div className="w-96 space-y-8">
+            <div className="w-96 max-[420px]:w-auto space-y-8">
               <MotionDiv
                 className="hidden lg:block"
                 variants={childrenVariants}
@@ -152,7 +152,7 @@ const Page = ({ params }: { params: { id: string } }) => {
               </div>
               <MotionDiv
                 variants={childrenVariants}
-                className="flex justify-between items-center"
+                className="flex justify-between items-center gap-4"
               >
                 <div className="flex text-lg">
                   <button onClick={() => handleQuantityBtn('decrement')} className="w-12 aspect-square rounded-full grid place-content-center bg-zinc-100 group">
@@ -165,9 +165,9 @@ const Page = ({ params }: { params: { id: string } }) => {
                     <FaPlus className="text-xs group-hover:scale-125 transition-transform" />
                   </button>
                 </div>
-                <p className="font-bold text-xl mr-5">
+                <p className="font-bold text-xl mr-5 flex gap-4 flex-wrap items-center justify-center">
                   <span>${product.price}</span>
-                  <span className="text-sm font-medium ml-5">
+                  <span className="text-sm font-medium">
                     <FaStar className="inline-block mb-[5px] text-yellow-400" />{" "}
                     {product.rating.rate} / {product.rating.count}
                   </span>
