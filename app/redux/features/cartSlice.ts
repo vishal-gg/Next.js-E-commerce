@@ -1,5 +1,6 @@
 import { ProductType } from "@/interfaces/types";
 import { createSlice } from "@reduxjs/toolkit/react";
+import initialProducts from "@/app/cart/initialProducts";
 
 const ifCartExists = typeof window !== 'undefined' ? localStorage.getItem("cart") : undefined;
 const cartFromLocalStorage = ifCartExists ? JSON.parse(ifCartExists) : null;
@@ -11,7 +12,7 @@ type CartType = {
 }
 
 const initialState: {cart: CartType[]} = {
-    cart: cartFromLocalStorage || []
+    cart: cartFromLocalStorage || initialProducts
 }
 
 
