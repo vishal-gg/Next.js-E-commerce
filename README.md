@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-Commerce Platform with Next.js
 
-## Getting Started
+ This is a basic E-Commerce Platform built with Next.js! This platform is designed and developed by me, a passionate Frontend Developer with expertise in React.js, Next.js,TypeScript,  JavaScript, and Tailwind CSS & more.
 
-First, run the development server:
+
+![screenshot of the product page](public/screenshot.jpg)
+
+## Live Demo
+[click here to view the live demo]('https://next-js-ecommerceapp.vercel.app')
+
+## Dependencies
+1. Next Js
+2. Framer Motion
+3. Redux Toolkit / RTK-Query
+4. Tailwind CSS
+5. React Icons
+
+## Features
+1. **Skeleton Loading:** Incorporate a loading skeleton to improve user experience during data loading.
+
+2. **Page Transition:** Utilize Framer Motion to implement smooth page transitions, enhancing the overall user interface.
+
+3. **Data Persistence on Client:** Ensure that cart data is persistently stored on the local storage.
+
+
+## Run Locally
 
 ```bash
+git clone https://github.com/vishal-gg/Next.js-E-commerce.git
+cd Next.js-E-commerce
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Troubleshooting
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you encounter any issues while setting up or running the E-Commerce Platform, feel free to reach out for assistance. Here are some common problems and their solutions:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Problem: Node.js Version Compatibility
 
-## Learn More
+Make sure you have the correct version of Node.js installed. The project is tested with Node.js version 20.5.0 You can download the recommended version from [here](https://nodejs.org/).
 
-To learn more about Next.js, take a look at the following resources:
+### Problem: Dependency Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you face issues during the `npm install` step, try the following:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm cache clean --force
+npm install
+```
