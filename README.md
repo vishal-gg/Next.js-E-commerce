@@ -5,17 +5,17 @@
 
 ![screenshot of the product page](public/screenshot.jpg)
 
-## Live Demo
-[click here to view the live demo]('https://next-js-ecommerceapp.vercel.app')
+## Live Demo 🚀
+[click here to view the live demo](https://next-js-ecommerceapp.vercel.app)
 
-## Dependencies
+## Dependencies 📚
 1. Next Js
 2. Framer Motion
 3. Redux Toolkit / RTK-Query
 4. Tailwind CSS
 5. React Icons
 
-## Features
+## Features ✨
 1. **Skeleton Loading:** Incorporate a loading skeleton to improve user experience during data loading.
 
 2. **Page Transition:** Utilize Framer Motion to implement smooth page transitions, enhancing the overall user interface.
@@ -23,7 +23,7 @@
 3. **Data Persistence on Client:** Ensure that cart data is persistently stored on the local storage.
 
 
-## Run Locally
+## Run Locally 💻
 
 ```bash
 git clone https://github.com/vishal-gg/Next.js-E-commerce.git
@@ -32,7 +32,7 @@ npm install
 npm run dev
 ```
 
-## Troubleshooting
+## Troubleshooting ⚙
 
 If you encounter any issues while setting up or running the E-Commerce Platform, feel free to reach out for assistance. Here are some common problems and their solutions:
 
